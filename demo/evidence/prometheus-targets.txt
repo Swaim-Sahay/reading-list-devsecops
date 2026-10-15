@@ -1,0 +1,4 @@
+Prometheus targets for namespace readinglist:
+  http://10.244.0.5:8000/metrics up
+  http://10.244.0.8:8000/metrics up
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"path":"/health","status":"200"},"value":[1792072115.931,"232"]},{"metric":{"path":"/api/books","status":"201"},"value":[1792072115.931,"1"]},{"metric":{"path":"/api/books","status":"200"},"value":[1792072115.931,"61"]},{"metric":{"path":"/api/books/{book_id}","status":"404"},"value":[1792072115.931,"60"]}]}}

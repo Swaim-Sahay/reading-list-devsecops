@@ -120,7 +120,7 @@ helm upgrade --install argocd argo-cd --repo https://argoproj.github.io/argo-hel
 kubectl apply -f argocd/application.yaml     # after setting repoURL
 ```
 
-Before first use, replace `YOUR_GITHUB_USER` in `helm/readinglist/values.yaml` and `argocd/application.yaml` with your GitHub username.
+The GitHub username is already set to `Swaim-Sahay` in `helm/readinglist/values.yaml` and `argocd/application.yaml`; change it if you fork the repo.
 
 ## Observability
 

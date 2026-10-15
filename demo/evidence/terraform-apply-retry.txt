@@ -1,0 +1,215 @@
+module.eks.module.kms.data.aws_caller_identity.current[0]: Reading...
+data.aws_availability_zones.available: Reading...
+module.eks.data.aws_caller_identity.current[0]: Reading...
+module.eks.module.eks_managed_node_group["default"].data.aws_partition.current: Reading...
+module.eks.module.eks_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.eks.module.eks_managed_node_group["default"].data.aws_caller_identity.current: Reading...
+module.eks.data.aws_partition.current[0]: Reading...
+module.eks.module.kms.data.aws_partition.current[0]: Reading...
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Reading...
+module.vpc.aws_vpc.this[0]: Refreshing state... [id=vpc-0506cb3cf66408626]
+module.eks.data.aws_partition.current[0]: Read complete after 0s [id=aws]
+module.eks.module.kms.data.aws_partition.current[0]: Read complete after 0s [id=aws]
+module.eks.module.eks_managed_node_group["default"].data.aws_partition.current: Read complete after 0s [id=aws]
+module.eks.data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2830595799]
+module.eks.module.eks_managed_node_group["default"].data.aws_iam_policy_document.assume_role_policy[0]: Read complete after 0s [id=2560088296]
+module.eks.aws_cloudwatch_log_group.this[0]: Refreshing state... [id=/aws/eks/readinglist-eks/cluster]
+module.eks.aws_iam_role.this[0]: Refreshing state... [id=readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>02]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role.this[0]: Refreshing state... [id=default-eks-node-group-<ACCOUNT_ID><ACCOUNT_ID>01]
+module.eks.data.aws_iam_policy_document.custom[0]: Reading...
+module.eks.data.aws_iam_policy_document.custom[0]: Read complete after 0s [id=513122117]
+module.eks.aws_iam_policy.custom[0]: Refreshing state... [id=arn:aws:iam::<ACCOUNT_ID>:policy/readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>03]
+module.eks.data.aws_caller_identity.current[0]: Read complete after 0s [id=<ACCOUNT_ID>]
+module.eks.data.aws_iam_session_context.current[0]: Reading...
+module.eks.data.aws_iam_session_context.current[0]: Read complete after 0s [id=arn:aws:iam::<ACCOUNT_ID>:user/swaim]
+module.eks.module.kms.data.aws_caller_identity.current[0]: Read complete after 0s [id=<ACCOUNT_ID>]
+module.eks.module.eks_managed_node_group["default"].data.aws_caller_identity.current: Read complete after 1s [id=<ACCOUNT_ID>]
+data.aws_availability_zones.available: Read complete after 3s [id=ap-south-1]
+module.vpc.aws_default_security_group.this[0]: Refreshing state... [id=sg-0ebe4ec9991dbeba1]
+module.vpc.aws_default_route_table.default[0]: Refreshing state... [id=rtb-0dc3c46e58a72f3e0]
+module.vpc.aws_subnet.public[1]: Refreshing state... [id=subnet-0ad7e8848b669e317]
+module.vpc.aws_default_network_acl.this[0]: Refreshing state... [id=acl-00df19b03ad347191]
+module.vpc.aws_subnet.public[0]: Refreshing state... [id=subnet-0c58d8c6b654cc638]
+module.eks.aws_security_group.node[0]: Refreshing state... [id=sg-01958297728fc99e9]
+module.vpc.aws_subnet.private[0]: Refreshing state... [id=subnet-0de0df22504b4ed5e]
+module.vpc.aws_internet_gateway.this[0]: Refreshing state... [id=igw-0f23a73a917d7d3af]
+module.vpc.aws_subnet.private[1]: Refreshing state... [id=subnet-01c94ca22ffff2983]
+module.vpc.aws_route_table.private[0]: Refreshing state... [id=rtb-077eadc5f877cb6bb]
+module.vpc.aws_route_table.public[0]: Refreshing state... [id=rtb-0a663c9c927852ea1]
+module.eks.aws_security_group.cluster[0]: Refreshing state... [id=sg-0580008e2037cc401]
+module.vpc.aws_eip.nat[0]: Refreshing state... [id=eipalloc-06eeeb9022803a0b6]
+module.vpc.aws_route_table_association.private[1]: Refreshing state... [id=rtbassoc-054d3aff235a66e76]
+module.vpc.aws_route_table_association.private[0]: Refreshing state... [id=rtbassoc-0f02d7cb1b5e43038]
+module.vpc.aws_route_table_association.public[0]: Refreshing state... [id=rtbassoc-06c87c7e63f1d6e08]
+module.vpc.aws_route_table_association.public[1]: Refreshing state... [id=rtbassoc-06b38f9d21bee8763]
+module.vpc.aws_route.public_internet_gateway[0]: Refreshing state... [id=r-rtb-0a663c9c927852ea11080289494]
+module.eks.aws_security_group_rule.cluster["ingress_nodes_443"]: Refreshing state... [id=sgrule-956869053]
+module.eks.aws_security_group_rule.node["ingress_cluster_8443_webhook"]: Refreshing state... [id=sgrule-1317721101]
+module.eks.aws_security_group_rule.node["ingress_cluster_443"]: Refreshing state... [id=sgrule-2982242510]
+module.eks.aws_security_group_rule.node["ingress_cluster_4443_webhook"]: Refreshing state... [id=sgrule-2492764090]
+module.eks.aws_security_group_rule.node["ingress_cluster_9443_webhook"]: Refreshing state... [id=sgrule-707520454]
+module.eks.aws_security_group_rule.node["ingress_cluster_6443_webhook"]: Refreshing state... [id=sgrule-1574365228]
+module.eks.aws_security_group_rule.node["ingress_nodes_ephemeral"]: Refreshing state... [id=sgrule-1044622951]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_udp"]: Refreshing state... [id=sgrule-270314774]
+module.eks.aws_security_group_rule.node["ingress_cluster_kubelet"]: Refreshing state... [id=sgrule-1523562056]
+module.eks.aws_security_group_rule.node["egress_all"]: Refreshing state... [id=sgrule-2951418993]
+module.eks.aws_security_group_rule.node["ingress_self_coredns_tcp"]: Refreshing state... [id=sgrule-3024293625]
+module.vpc.aws_nat_gateway.this[0]: Refreshing state... [id=nat-03b146c947e32f710]
+module.vpc.aws_route.private_nat_gateway[0]: Refreshing state... [id=r-rtb-077eadc5f877cb6bb1080289494]
+module.eks.aws_iam_role_policy_attachment.custom[0]: Refreshing state... [id=readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>02-<ACCOUNT_ID><ACCOUNT_ID>07]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSClusterPolicy"]: Refreshing state... [id=readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>02-<ACCOUNT_ID><ACCOUNT_ID>09]
+module.eks.aws_iam_role_policy_attachment.this["AmazonEKSVPCResourceController"]: Refreshing state... [id=readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>02-<ACCOUNT_ID><ACCOUNT_ID>08]
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Reading...
+module.eks.module.kms.data.aws_iam_policy_document.this[0]: Read complete after 0s [id=3179483827]
+module.eks.module.kms.aws_kms_key.this[0]: Refreshing state... [id=e177e8b2-4cf8-4d39-b400-34f98b12f98d]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEKS_CNI_Policy"]: Refreshing state... [id=default-eks-node-group-<ACCOUNT_ID><ACCOUNT_ID>01-<ACCOUNT_ID><ACCOUNT_ID>06]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEC2ContainerRegistryReadOnly"]: Refreshing state... [id=default-eks-node-group-<ACCOUNT_ID><ACCOUNT_ID>01-<ACCOUNT_ID><ACCOUNT_ID>05]
+module.eks.module.eks_managed_node_group["default"].aws_iam_role_policy_attachment.this["AmazonEKSWorkerNodePolicy"]: Refreshing state... [id=default-eks-node-group-<ACCOUNT_ID><ACCOUNT_ID>01-<ACCOUNT_ID><ACCOUNT_ID>04]
+module.eks.module.kms.aws_kms_alias.this["cluster"]: Refreshing state... [id=alias/eks/readinglist-eks]
+module.eks.aws_iam_policy.cluster_encryption[0]: Refreshing state... [id=arn:aws:iam::<ACCOUNT_ID>:policy/readinglist-eks-cluster-ClusterEncryption<ACCOUNT_ID><ACCOUNT_ID>0f]
+module.eks.aws_eks_cluster.this[0]: Refreshing state... [id=readinglist-eks]
+module.eks.aws_iam_role_policy_attachment.cluster_encryption[0]: Refreshing state... [id=readinglist-eks-cluster-<ACCOUNT_ID><ACCOUNT_ID>02-<ACCOUNT_ID><ACCOUNT_ID>10]
+module.eks.aws_eks_access_entry.this["cluster_creator"]: Refreshing state... [id=readinglist-eks:arn:aws:iam::<ACCOUNT_ID>:user/swaim]
+module.eks.data.tls_certificate.this[0]: Reading...
+module.eks.time_sleep.this[0]: Refreshing state... [id=2026-10-15T14:26:09Z]
+module.eks.module.eks_managed_node_group["default"].module.user_data.null_resource.validate_cluster_service_cidr: Refreshing state... [id=<ACCOUNT_ID>3421294]
+module.eks.aws_eks_access_policy_association.this["cluster_creator_admin"]: Refreshing state... [id=readinglist-eks#arn:aws:iam::<ACCOUNT_ID>:user/swaim#arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy]
+module.eks.data.tls_certificate.this[0]: Read complete after 4s [id=1e3a331631939a1ae4a625cd4244a4963dabbfa2]
+module.eks.aws_iam_openid_connect_provider.oidc_provider[0]: Refreshing state... [id=arn:aws:iam::<ACCOUNT_ID>:oidc-provider/oidc.eks.ap-south-1.amazonaws.com/id/3C73D3B12F9692E671B237E811BFD7A2]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0] will be created
+  + resource "aws_eks_node_group" "this" {
+      + ami_type               = (known after apply)
+      + arn                    = (known after apply)
+      + capacity_type          = (known after apply)
+      + cluster_name           = "readinglist-eks"
+      + disk_size              = (known after apply)
+      + id                     = (known after apply)
+      + instance_types         = [
+          + "t3.medium",
+        ]
+      + node_group_name        = (known after apply)
+      + node_group_name_prefix = "default-"
+      + node_role_arn          = "arn:aws:iam::<ACCOUNT_ID>:role/default-eks-node-group-<ACCOUNT_ID><ACCOUNT_ID>01"
+      + release_version        = (known after apply)
+      + resources              = (known after apply)
+      + status                 = (known after apply)
+      + subnet_ids             = [
+          + "subnet-01c94ca22ffff2983",
+          + "subnet-0de0df22504b4ed5e",
+        ]
+      + tags                   = {
+          + "Name" = "default"
+        }
+      + tags_all               = {
+          + "ManagedBy" = "terraform"
+          + "Name"      = "default"
+          + "Project"   = "readinglist"
+        }
+      + version                = "1.31"
+
+      + launch_template {
+          + id      = (known after apply)
+          + name    = (known after apply)
+          + version = (known after apply)
+        }
+
+      + node_repair_config (known after apply)
+
+      + scaling_config {
+          + desired_size = 2
+          + max_size     = 3
+          + min_size     = 1
+        }
+
+      + timeouts {}
+
+      + update_config {
+          + max_unavailable_percentage = 33
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0] will be created
+  + resource "aws_launch_template" "this" {
+      + arn                    = (known after apply)
+      + default_version        = (known after apply)
+      + description            = "Custom launch template for default EKS managed node group"
+      + id                     = (known after apply)
+      + latest_version         = (known after apply)
+      + name                   = (known after apply)
+      + name_prefix            = "default-"
+      + tags_all               = {
+          + "ManagedBy" = "terraform"
+          + "Project"   = "readinglist"
+        }
+      + update_default_version = true
+      + vpc_security_group_ids = [
+          + "sg-01958297728fc99e9",
+        ]
+        # (2 unchanged attributes hidden)
+
+      + metadata_options {
+          + http_endpoint               = "enabled"
+          + http_protocol_ipv6          = (known after apply)
+          + http_put_response_hop_limit = 2
+          + http_tokens                 = "required"
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + monitoring {
+          + enabled = true
+        }
+
+      + tag_specifications {
+          + resource_type = "instance"
+          + tags          = {
+              + "Name" = "default"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "network-interface"
+          + tags          = {
+              + "Name" = "default"
+            }
+        }
+      + tag_specifications {
+          + resource_type = "volume"
+          + tags          = {
+              + "Name" = "default"
+            }
+        }
+    }
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0]: Creating...
+module.eks.module.eks_managed_node_group["default"].aws_launch_template.this[0]: Creation complete after 6s [id=lt-0f461e7f1d8a418eb]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Creating...
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [00m10s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [00m20s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [00m30s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [00m40s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [00m50s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [01m00s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [01m10s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [01m20s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [01m30s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Still creating... [01m40s elapsed]
+module.eks.module.eks_managed_node_group["default"].aws_eks_node_group.this[0]: Creation complete after 1m50s [id=readinglist-eks:default-<ACCOUNT_ID><ACCOUNT_ID>03]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+cluster_name = "readinglist-eks"
+configure_kubectl = "aws eks update-kubeconfig --region ap-south-1 --name readinglist-eks"
+public_subnet_ids = [
+  "subnet-0c58d8c6b654cc638",
+  "subnet-0ad7e8848b669e317",
+]
+vpc_id = "vpc-0506cb3cf66408626"

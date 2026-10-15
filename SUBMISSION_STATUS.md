@@ -29,7 +29,7 @@ Deadline: Sunday 19 Oct 2026, 11:59 PM IST. Nothing has been pushed or submitted
 9. **Google Form submission** — not allowed/requested.
 
 ## Your checklist
-1. Replace `YOUR_GITHUB_USER` in `helm/readinglist/values.yaml` and `argocd/application.yaml`.
+1. (Done) GitHub username set to Swaim-Sahay in the Helm values and ArgoCD app.
 2. Create a public GitHub repo, push `main`, confirm the Actions run is green, make GHCR packages public.
 3. Follow the README: Terraform, ingress-nginx, Helm, ArgoCD, kube-prometheus-stack.
 4. Take screenshots, record the video, put it in `demo/`, commit and push.
@@ -37,3 +37,12 @@ Deadline: Sunday 19 Oct 2026, 11:59 PM IST. Nothing has been pushed or submitted
 6. Submit at https://forms.gle/XWAP1vAumDJgAPM1A.
 
 Also be ready to explain the project and one Trivy result yourself; the rubric awards a point for that.
+
+## Update: local kind cluster run (real, verified)
+Run on a local `kind` cluster (free stand-in for EKS). Evidence in `demo/evidence/`:
+- `k8s-helm-output.txt`: 5 pods Running (2 backend, 2 frontend, postgres), ClusterIP services, Ingress, `helm list`.
+- App reachable through the ingress at http://localhost:8088 (frontend 200, `/api/books` works).
+- `prometheus-targets.txt`: both backend pods scraped, health `up`; request metrics queryable.
+- ArgoCD installed (all pods Running); Grafana dashboard 'Reading List API' provisioned.
+Still not done: ArgoCD sync (needs repo pushed to GitHub), AWS/EKS (credentials), video, screenshots.
+Cluster is still running; remove with `kind delete cluster --name readinglist`.

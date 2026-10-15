@@ -1,0 +1,21 @@
+$ kubectl get pods -n readinglist
+NAME                        READY   STATUS    RESTARTS        AGE
+backend-68b78f9897-8gjxq    1/1     Running   3 (2m45s ago)   3m3s
+backend-68b78f9897-rv9rf    1/1     Running   4 (2m20s ago)   3m3s
+frontend-64dd4b9bdd-jvpvf   1/1     Running   0               3m3s
+frontend-64dd4b9bdd-lsmnn   1/1     Running   0               3m3s
+postgres-0                  1/1     Running   0               3m3s
+
+$ kubectl get svc -n readinglist
+NAME       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+backend    ClusterIP   10.96.17.98     <none>        8000/TCP   3m4s
+frontend   ClusterIP   10.96.136.208   <none>        80/TCP     3m4s
+postgres   ClusterIP   None            <none>        5432/TCP   3m4s
+
+$ kubectl get ingress -n readinglist
+NAME          CLASS   HOSTS   ADDRESS     PORTS   AGE
+readinglist   nginx   *       localhost   80      3m4s
+
+$ helm list -n readinglist
+NAME       	NAMESPACE  	REVISION	UPDATED                             	STATUS  	CHART            	APP VERSION
+readinglist	readinglist	1       	2026-10-15 19:10:40.245873 +0530 IST	deployed	readinglist-1.0.0	1.0.0      
