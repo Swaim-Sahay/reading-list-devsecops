@@ -44,7 +44,7 @@ jobs:
       contents: read
       packages: write
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         component: [backend, frontend]
     steps:
