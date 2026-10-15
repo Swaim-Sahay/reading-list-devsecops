@@ -46,3 +46,9 @@ Run on a local `kind` cluster (free stand-in for EKS). Evidence in `demo/evidenc
 - ArgoCD installed (all pods Running); Grafana dashboard 'Reading List API' provisioned.
 Still not done: ArgoCD sync (needs repo pushed to GitHub), AWS/EKS (credentials), video, screenshots.
 Cluster is still running; remove with `kind delete cluster --name readinglist`.
+
+## Update: GitHub Actions verified (run 38758139370, all jobs green)
+- pytest, frontend build, both image builds, Trivy scans (HIGH/CRITICAL gate) and SHA-tagged push to GHCR all pass.
+- Trivy first failed with real findings (Alpine packages in the nginx base image, old starlette, and copies vendored inside pip/setuptools). Fixed by upgrading starlette/fastapi, using the stable Alpine nginx image with `apk upgrade`, and removing pip/setuptools from the runtime image. Good material for the Trivy explanation in the video.
+- GitOps bump now writes the commit SHA into `helm/readinglist/values.yaml` (ArgoCD input).
+Still open: make the 2 GHCR packages public, ArgoCD sync, video, screenshots, `terraform destroy`.
