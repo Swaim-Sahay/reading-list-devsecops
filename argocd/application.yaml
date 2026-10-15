@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: readinglist
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/YOUR_GITHUB_USER/reading-list-devsecops.git
+    targetRevision: main
+    path: helm/readinglist
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: readinglist
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
