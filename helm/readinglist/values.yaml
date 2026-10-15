@@ -1,14 +1,14 @@
 backend:
   image:
     repository: ghcr.io/swaim-sahay/reading-list-devsecops-backend
-    tag: "a65a4c8dd8a6a804ad3c631bf247b25b8c25d068"
+    tag: "8d78b168724ba184d04e907cc0fb24b13eff3cef"
   replicas: 2
   port: 8000
 
 frontend:
   image:
     repository: ghcr.io/swaim-sahay/reading-list-devsecops-frontend
-    tag: "a65a4c8dd8a6a804ad3c631bf247b25b8c25d068"
+    tag: "8d78b168724ba184d04e907cc0fb24b13eff3cef"
   replicas: 2
   port: 8080
 
