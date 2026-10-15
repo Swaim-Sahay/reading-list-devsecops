@@ -1,0 +1,21 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-8.4.2, pluggy-1.7.0 -- /Users/swaimsahay/Library/Application Support/Claude/scratch-workspaces/527a89c2-479b-46ca-9249-594b32c68655/7e8dae1b-b1d1-485d-bda5-afe8b947e0ee/scratch-2026-10-15-1e5731/reading-list-devsecops/backend/.venv/bin/python3.14
+cachedir: .pytest_cache
+rootdir: /Users/swaimsahay/Library/Application Support/Claude/scratch-workspaces/527a89c2-479b-46ca-9249-594b32c68655/7e8dae1b-b1d1-485d-bda5-afe8b947e0ee/scratch-2026-10-15-1e5731/reading-list-devsecops/backend
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 8 items
+
+tests/test_api.py::test_health PASSED                                    [ 12%]
+tests/test_api.py::test_create_book PASSED                               [ 25%]
+tests/test_api.py::test_list_books PASSED                                [ 37%]
+tests/test_api.py::test_get_book_and_404 PASSED                          [ 50%]
+tests/test_api.py::test_update_book PASSED                               [ 62%]
+tests/test_api.py::test_delete_book PASSED                               [ 75%]
+tests/test_api.py::test_validation_rejects_bad_rating PASSED             [ 87%]
+tests/test_api.py::test_metrics_endpoint_exposes_request_counter PASSED  [100%]
+
+.venv/lib/python3.14/site-packages/starlette/testclient.py:51
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+

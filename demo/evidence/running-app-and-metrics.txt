@@ -1,0 +1,18 @@
+NAME                                IMAGE                             COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+reading-list-devsecops-backend-1    reading-list-devsecops-backend    "sh -c 'alembic upgr…"   backend    14 seconds ago   Up 8 seconds              0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+reading-list-devsecops-db-1         postgres:16-alpine                "docker-entrypoint.s…"   db         14 seconds ago   Up 13 seconds (healthy)   5432/tcp
+reading-list-devsecops-frontend-1   reading-list-devsecops-frontend   "/docker-entrypoint.…"   frontend   14 seconds ago   Up 8 seconds              0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+
+{"status":"ok"}
+{"title":"The Phoenix Project","author":"Gene Kim","status":"reading","rating":5,"id":2,"created_at":"2026-10-15T13:34:17.295746Z"}
+[{"title":"Dune","author":"Frank Herbert","status":"to-read","rating":null,"id":1,"created_at":"2026-10-15T13:12:47.762518Z"},{"title":"The Phoenix Project","author":"Gene Kim","status":"reading","rating":5,"id":2,"created_at":"2026-10-15T13:34:17.295746Z"}]
+--- /metrics ---
+http_requests_total{method="GET",path="/health",status="200"} 1.0
+http_requests_total{method="POST",path="/api/books",status="201"} 1.0
+http_requests_total{method="GET",path="/api/books",status="200"} 1.0
+http_request_duration_seconds_count{method="GET",path="/health"} 1.0
+http_request_duration_seconds_count{method="POST",path="/api/books"} 1.0
+http_request_duration_seconds_count{method="GET",path="/api/books"} 1.0
+
+uid=10001(appuser) gid=10001(appuser) groups=10001(appuser)
+uid=101(nginx) gid=101(nginx) groups=101(nginx)

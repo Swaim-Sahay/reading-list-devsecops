@@ -1,0 +1,6 @@
+Success! The configuration is valid.
+
+==> Linting helm/readinglist
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
