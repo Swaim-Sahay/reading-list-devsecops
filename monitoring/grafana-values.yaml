@@ -1,0 +1,13 @@
+# Standalone alternative (if not using kube-prometheus-stack's bundled Grafana):
+# helm upgrade --install grafana grafana/grafana -n monitoring -f monitoring/grafana-values.yaml
+adminPassword: admin   # demo only
+service:
+  type: ClusterIP
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://kube-prometheus-stack-prometheus.monitoring:9090
+        isDefault: true

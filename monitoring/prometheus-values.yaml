@@ -1,0 +1,16 @@
+# helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheus-stack -n monitoring -f monitoring/prometheus-values.yaml
+prometheus:
+  prometheusSpec:
+    # discover ServiceMonitors from any release/namespace (our chart ships one)
+    serviceMonitorSelectorNilUsesHelmValues: false
+    retention: 3d
+alertmanager:
+  enabled: false
+grafana:
+  adminPassword: admin   # demo only - change for real use
+  service:
+    type: ClusterIP
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard

@@ -1,0 +1,14 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "readinglist-dashboard",
+    "namespace": "monitoring",
+    "labels": {
+      "grafana_dashboard": "1"
+    }
+  },
+  "data": {
+    "readinglist.json": "{\n  \"title\": \"Reading List API\",\n  \"uid\": \"readinglist-api\",\n  \"schemaVersion\": 39,\n  \"refresh\": \"10s\",\n  \"time\": {\n    \"from\": \"now-30m\",\n    \"to\": \"now\"\n  },\n  \"panels\": [\n    {\n      \"id\": 1,\n      \"type\": \"timeseries\",\n      \"title\": \"Request rate (req/s)\",\n      \"gridPos\": {\n        \"h\": 8,\n        \"w\": 12,\n        \"x\": 0,\n        \"y\": 0\n      },\n      \"datasource\": {\n        \"type\": \"prometheus\"\n      },\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"reqps\"\n        },\n        \"overrides\": []\n      },\n      \"targets\": [\n        {\n          \"expr\": \"sum by (path) (rate(http_requests_total[1m]))\",\n          \"legendFormat\": \"{{path}}\",\n          \"refId\": \"A\"\n        }\n      ]\n    },\n    {\n      \"id\": 2,\n      \"type\": \"timeseries\",\n      \"title\": \"p95 latency\",\n      \"gridPos\": {\n        \"h\": 8,\n        \"w\": 12,\n        \"x\": 12,\n        \"y\": 0\n      },\n      \"datasource\": {\n        \"type\": \"prometheus\"\n      },\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"s\"\n        },\n        \"overrides\": []\n      },\n      \"targets\": [\n        {\n          \"expr\": \"histogram_quantile(0.95, sum by (le, path) (rate(http_request_duration_seconds_bucket[5m])))\",\n          \"legendFormat\": \"{{path}}\",\n          \"refId\": \"A\"\n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"type\": \"timeseries\",\n      \"title\": \"5xx error rate\",\n      \"gridPos\": {\n        \"h\": 8,\n        \"w\": 12,\n        \"x\": 0,\n        \"y\": 8\n      },\n      \"datasource\": {\n        \"type\": \"prometheus\"\n      },\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"reqps\"\n        },\n        \"overrides\": []\n      },\n      \"targets\": [\n        {\n          \"expr\": \"sum(rate(http_requests_total{status=~\\\"5..\\\"}[1m]))\",\n          \"legendFormat\": \"{{path}}\",\n          \"refId\": \"A\"\n        }\n      ]\n    },\n    {\n      \"id\": 4,\n      \"type\": \"timeseries\",\n      \"title\": \"Requests by status\",\n      \"gridPos\": {\n        \"h\": 8,\n        \"w\": 12,\n        \"x\": 12,\n        \"y\": 8\n      },\n      \"datasource\": {\n        \"type\": \"prometheus\"\n      },\n      \"fieldConfig\": {\n        \"defaults\": {\n          \"unit\": \"reqps\"\n        },\n        \"overrides\": []\n      },\n      \"targets\": [\n        {\n          \"expr\": \"sum by (status) (rate(http_requests_total[1m]))\",\n          \"legendFormat\": \"{{path}}\",\n          \"refId\": \"A\"\n        }\n      ]\n    }\n  ]\n}"
+  }
+}
